@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BakeChain Dashboard</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
   <link rel="stylesheet" href="./css/style.css">
   <style>
   </style>
@@ -24,11 +26,12 @@
   <main class="main">
 
     <div class="header" id="dashboard">
-      <h1><span style="color: #DE3E34;">Dash</span>board 🎂</h1>
+      <h1>Dashboard <i class="fa fa-birthday-cake" aria-hidden="true"></i></h1>
       <span class="status">Active</span>
     </div>
 
-    <section class="cards">
+    <div class="main_content">
+      <section class="cards">
       <div class="card">
         <h2>Total Blocks</h2>
         <p>5</p>
@@ -82,6 +85,7 @@
     </section>
 
     <section class="validate success" id="validateChain">Blockchain is Valid</section>
+    </div>
 
   </main>
 

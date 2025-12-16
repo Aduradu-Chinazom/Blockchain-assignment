@@ -56,10 +56,9 @@
 
     .main {
       flex: 1;
-      padding: 32px;
       overflow-y: auto;
       position: relative;
-      background-image: url(./images/cake.png);
+      background-image: url(../images/bread_three.png);
       background-size: cover;
       background-repeat: no-repeat;
       min-height: 100vh;
@@ -71,7 +70,9 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 32px;
-      color: #F6B16C;
+      color: #3B2F2F;
+      background-color: #F4A261;
+      padding: 16px 32px;
     }
 
     .header h1 {
@@ -79,6 +80,9 @@
       font-size: 30px;
     }
 
+    .main_content {
+      padding: 0 32px 32px 32px;
+    }
     .status {
       padding: 6px 12px;
       border-radius: 20px;
