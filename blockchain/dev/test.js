@@ -1,12 +1,10 @@
-const { Blockchain, Block } = require("./blockchain");
+const { Blockchain, Transaction } = require("./blockchain");
 
-const testCoin = new Blockchain();
+const bakeryChain = new Blockchain();
 
-testCoin.pendingTransactions.push({ amount: 4 });
-testCoin.minePendingTransactions();
+bakeryChain.addTransaction(new Transaction("Bread", 20, "Baker John"));
+bakeryChain.addTransaction(new Transaction("Cake", 5, "Baker Mary"));
 
-testCoin.pendingTransactions.push({ amount: 4 });
-testCoin.minePendingTransactions();
+bakeryChain.minePendingTransactions();
 
-// Print the blockchain
-console.log(JSON.stringify(testCoin, null, 4));
+console.log(JSON.stringify(bakeryChain, null, 4));
