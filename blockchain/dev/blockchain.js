@@ -85,6 +85,36 @@ class Blockchain {
         this.pendingTransactions = [];
         return block;
     }
+
+    
+// Member 4
+   // VALIDATION    
+   isChainValid() {
+        for (let i = 1; i < this.chain.length; i++) {
+            const currentBlock = this.chain[i];
+            const previousBlock = this.chain[i - 1]; 
+
+            // recalculate hash and compare
+            if (currentBlock.hash !== currentBlock.calculateHash()) {
+                console.log('Block ${currentBlock.index} has invalid hash.');
+                return false;
+            }
+            // check previous hash link
+            if (currentBlock.previousHash !== previousBlock.hash) {
+                console.log('Block ${currentBlock.index} previous has does not match.');
+                return false;
+            }
+            // check transactions validity
+            for (const tx of currentBlock.transactions) {
+                if (!tx.isValid()) {
+                    console.log('Block ${currentBlock.index} has invalid transaction.');
+                    return false;
+                }
+        }
+        // All blocks are valid
+        return true;
+    }
+}
 }
 
 module.exports = { Blockchain, Block, Transaction };
