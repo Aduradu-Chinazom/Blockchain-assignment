@@ -46,22 +46,23 @@
       </div>
     </section>
 
-    <section class="form-card" id="addTransaction">
-      <h2 style="margin-bottom: 24px">Add Baking Transaction</h2>
-      <div class="form-group">
-        <label>Product Name</label>
-        <input type="text" placeholder="Bread" />
-      </div>
-      <div class="form-group">
-        <label>Quantity</label>
-        <input type="number" placeholder="20" />
-      </div>
-      <div class="form-group">
-        <label>Baker Name</label>
-        <input type="text" placeholder="John" />
-      </div>
-      <button class="btn">Add Transaction</button>
-    </section>
+   <section class="form-card" id="addTransaction">
+  <h2 style="margin-bottom: 24px">Add Baking Transaction</h2>
+  <div class="form-group">
+    <label>Product Name</label>
+    <input type="text" placeholder="Bread" id="productInput" />
+  </div>
+  <div class="form-group">
+    <label>Quantity</label>
+    <input type="number" placeholder="20" id="quantityInput" />
+  </div>
+  <div class="form-group">
+    <label>Baker Name</label>
+    <input type="text" placeholder="John" id="bakerInput" />
+  </div>
+  <button class="btn">Add Transaction</button>
+</section>
+
 
     <!-- Mine Block Section -->
     <section class="form-card" id="mineBlock">
@@ -88,7 +89,9 @@
     </div>
 
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
 
-  <script src="./js/script.js"></script>
+  <script type="module" src="./js/script.js"></script>
+
 </body>
 </html>

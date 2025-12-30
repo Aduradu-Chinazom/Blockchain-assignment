@@ -1,12 +1,20 @@
-const { Blockchain, Block } = require("./blockchain");
+const { Blockchain, Transaction } = require("./blockchain");
 
-const testCoin = new Blockchain();
+const bakeryChain = new Blockchain();
 
-testCoin.pendingTransactions.push({ amount: 4 });
-testCoin.minePendingTransactions();
+bakeryChain.addTransaction(new Transaction("Bread", 20, "Baker John"));
+bakeryChain.addTransaction(new Transaction("Cake", 5, "Baker Mary"));
 
-testCoin.pendingTransactions.push({ amount: 4 });
-testCoin.minePendingTransactions();
+bakeryChain.minePendingTransactions();
 
-// Print the blockchain
-console.log(JSON.stringify(testCoin, null, 4));
+
+//Member 4
+
+//check if chain is valid
+console.log("Is blockchain valid? " + bakeryChain.isChainValid());
+
+// Tamper with the blockchain
+bakeryChain.chain[1].transactions[0].quantity = 1000; 
+console.log("Is blockchain valid after tampering? " + bakeryChain.isChainValid());
+
+console.log(JSON.stringify(bakeryChain, null, 4));
