@@ -1,0 +1,35 @@
+{
+    "chain": [
+        {
+            "index": 0,
+            "timestamp": 1768103223827,
+            "transactions": [],
+            "previousHash": "0",
+            "hash": "aadd31c472c3fc0c8d9439be114042fb24747b239db655a5925b2bd3a047b9fc",
+            "nonce": 0
+        },
+        {
+            "index": 1,
+            "timestamp": 1768103223829,
+            "transactions": [
+                {
+                    "productName": "Bread",
+                    "quantity": 20,
+                    "bakerName": "Baker John",
+                    "timestamp": 1768103223828
+                },
+                {
+                    "productName": "Cake",
+                    "quantity": 5,
+                    "bakerName": "Baker Mary",
+                    "timestamp": 1768103223829
+                }
+            ],
+            "previousHash": "aadd31c472c3fc0c8d9439be114042fb24747b239db655a5925b2bd3a047b9fc",
+            "hash": "00231740ff281cf1930b969e3f7f7acfab25e069347ba54becc8030f99bcc4de",
+            "nonce": 143
+        }
+    ],
+    "pendingTransactions": [],
+    "difficulty": 2
+}
